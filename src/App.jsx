@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import EmployeeList from "./employee/employeeList"; // Import EmployeeList component
+import CreateEmployee from "./employee/createEmployee"; // Import CreateEmployee component
 
 function App() {
   return (
@@ -8,10 +9,8 @@ function App() {
       <div className="app-container">
         {/* Render the navbar and sidebar for routes other than '/employee-list' */}
         <Routes>
-          <Route
-            path="/employee-list"
-            element={<EmployeeList />} // Directly renders the Hello World page without navbar/sidebar
-          />
+          <Route path="/employee-list" element={<EmployeeList />} />
+          <Route path="/create-employee" element={<CreateEmployee />} />
           <Route
             path="/"
             element={
@@ -35,9 +34,6 @@ function App() {
                       <Link to="/roles">Roles</Link>
                     </li>
                   </ul>
-                </div>
-                <div className="content">
-                  <h1>Welcome to the App!</h1>
                 </div>
               </>
             }

@@ -1,11 +1,24 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "./employeeList.css";
 
 const EmployeeList = () => {
+  const navigate = useNavigate(); // Initialize useNavigate hook
+
+  const handleAddEmployee = () => {
+    navigate("/create-employee"); // Navigate to the CreateEmployee page
+  };
+
+  const handleBackClick = () => {
+    navigate("/"); // Go back to the previous page in the history stack
+  };
+
   return (
     <div className="employee-list-container">
       <div className="header">
-        <button className="back-button">{"<"}</button>
+        <button className="back-button" onClick={handleBackClick}>
+          {"<"}
+        </button>
         <h2>Employee List</h2>
         <div>
           <label>
@@ -48,7 +61,9 @@ const EmployeeList = () => {
         </tbody>
       </table>
 
-      <button className="add-button">+</button>
+      <button className="add-button" onClick={handleAddEmployee}>
+        +
+      </button>
     </div>
   );
 };

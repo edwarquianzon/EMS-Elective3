@@ -11,7 +11,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #e74c3c; /* Red header */
+  background-color: #b51616; /* Red header */
   color: white;
   padding: 10px;
   border-top-left-radius: 10px;
@@ -34,6 +34,7 @@
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+  color: black;
 }
 
 .table th,
@@ -52,15 +53,21 @@
 }
 
 .add-button {
-  background-color: #2ecc71; /* Green add button */
+  background-color: #3bcc2e; /* Green add button */
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 15px; /* Equal padding for width and height */
+  border-radius: 50%; /* Make the button round */
   cursor: pointer;
   position: absolute;
   bottom: 20px;
   right: 20px;
+  width: 60px; /* Set a fixed width */
+  height: 60px; /* Set a fixed height */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the icon inside the button */
+  font-size: 30px; /* Adjust the font size for the "+" sign */
 }
 
 .back-button {
