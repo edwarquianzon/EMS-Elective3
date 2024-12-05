@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffe6dc; /* Page background */
+}
+
+.view-employee-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ensures the container takes the full height of the viewport */
+  width: 100vw; /* Ensures the content spans the full width */
+}
+
+/* Navbar styling */
+.navbar-container {
+  background-color: #b51616;
+  color: white;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensures the content is spread across */
+  box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.back-button {
+  background-color: #b51616;
+  color: white;
+  border: none;
+  font-size: 40px;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-right: 10px; /* Adds spacing between the back button and the title */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Details container */
+.details-container {
+  padding: 20px;
+  background-color: #ffe6dc;
+  margin: 20px auto; /* Center the container horizontally */
+  box-sizing: border-box; /* Ensures padding doesn't affect the width */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align all items to the left */
+}
+
+.detail-item {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 5px;
+}
+
+span {
+  font-size: 16px;
+  color: black;
+  display: block; /* Ensure the text takes up its own line */
+}
+
+.pin {
+  letter-spacing: 10px;
+  font-weight: bold;
+}

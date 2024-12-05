@@ -1,28 +1,17 @@
-import { useState } from "react";
+import React from "react"; // Adjust the path if needed
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Import Router components
 import "./App.css";
+import ViewEmployee from "./employee/viewEmployee.jsx"; // Adjust the import path if needed
+import EditEmployee from "./employee/editEmployee.jsx"; // Make sure to import EditEmployee
 
 function App() {
-  const [active, setActive] = useState(null);
-
   return (
-    <div className="app-container">
-      <div className="navbar">
-        <div className="navbar-content">
-          <div className="hamburger-menu">
-            <div className="bar"></div>
-            <div className="bar"></div>
-            <div className="bar"></div>
-          </div>
-          <span className="logo">Employee</span>
-        </div>
-      </div>
-      <div className="sidebar">
-        <ul className="menu">
-          <li className={`menu-item`}>Employee List</li>
-          <li className={`menu-item`}>Roles</li>
-        </ul>
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<ViewEmployee />} />
+        <Route path="/edit-employee" element={<EditEmployee />} />
+      </Routes>
+    </Router>
   );
 }
 

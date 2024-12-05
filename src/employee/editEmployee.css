@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffe6dc; /* Page background */
+}
+
+.edit-employee-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ensures the container takes the full height of the viewport */
+  width: 100vw; /* Ensures the content spans the full width */
+}
+
+/* Navbar styling */
+.navbar-container {
+  background-color: #b51616;
+  color: white;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensures the content is spread across */
+  box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.back-button {
+  background-color: #b51616;
+  color: white;
+  border: none;
+  font-size: 40px;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-right: 10px; /* Adds spacing between the back button and the title */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Form container */
+.form-container {
+  padding: 20px;
+  background-color: #ffe6dc; /* Form background color */
+  margin: 20px; /* Center the container horizontally */
+  box-sizing: border-box; /* Ensures padding doesn't affect the width */
+}
+
+.employee-form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+}
+
+input,
+select {
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  background-color: #ffe6dc; /* Black background for the inputs */
+  color: black; /* White text inside the inputs */
+  border: none; /* Remove borders */
+  border-radius: 4px;
+  box-sizing: border-box; /* Prevents overflow */
+  border-bottom: 2px solid black;
+}
+
+select {
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  padding: 10px;
+  background-color: #b51616;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
