@@ -1,0 +1,81 @@
+/* employeeList.css */
+
+.employee-list-container {
+  background-color: #f0f0f0; /* Light gray background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #b51616; /* Red header */
+  color: white;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.header button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  color: black;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f2f2f2;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.add-button {
+  background-color: #3bcc2e; /* Green add button */
+  color: white;
+  border: none;
+  padding: 15px; /* Equal padding for width and height */
+  border-radius: 50%; /* Make the button round */
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 60px; /* Set a fixed width */
+  height: 60px; /* Set a fixed height */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the icon inside the button */
+  font-size: 30px; /* Adjust the font size for the "+" sign */
+}
+
+.back-button {
+  background-color: #b51616;
+  color: white;
+  border: none;
+  font-size: 40px;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-right: 10px;
+}

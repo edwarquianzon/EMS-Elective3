@@ -1,16 +1,48 @@
 import React from "react"; // Adjust the path if needed
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Import Router components
 import "./App.css";
 import ViewEmployee from "./employee/viewEmployee.jsx"; // Adjust the import path if needed
 import EditEmployee from "./employee/editEmployee.jsx"; // Make sure to import EditEmployee
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<ViewEmployee />} />
-        <Route path="/edit-employee" element={<EditEmployee />} />
-      </Routes>
+      <div className="app-container">
+        {/* Render the navbar and sidebar for routes other than '/employee-list' */}
+        <Routes>
+          <Route path="/employee-list" element={<EmployeeList />} />
+          <Route path="/create-employee" element={<CreateEmployee />} />
+          <Route path="/" element={<ViewEmployee />} />
+          <Route path="/edit-employee" element={<EditEmployee />} />
+          <Route
+            path="/"
+            element={
+              <>
+                <div className="navbar">
+                  <div className="navbar-content">
+                    <div className="hamburger-menu">
+                      <div className="bar"></div>
+                      <div className="bar"></div>
+                      <div className="bar"></div>
+                    </div>
+                    <span className="logo">Employee</span>
+                  </div>
+                </div>
+                <div className="sidebar">
+                  <ul className="menu">
+                    <li className="menu-item">
+                      <Link to="/employee-list">Employee List</Link>
+                    </li>
+                    <li className="menu-item">
+                      <Link to="/roles">Roles</Link>
+                    </li>
+                  </ul>
+                </div>
+              </>
+            }
+          />
+        </Routes>
+      </div>
     </Router>
   );
 }

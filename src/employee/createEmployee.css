@@ -1,0 +1,114 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffe6dc; /* Page background */
+}
+
+.create-employee-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ensures the container takes the full height of the viewport */
+  width: 100vw; /* Set width to 100% to ensure the navbar spans the full width */
+}
+
+/* Navbar container covering full width */
+.navbar-container {
+  background-color: #b51616;
+  color: white;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensures the content is spread across */
+  box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center; /* Align back button and title in the center vertically */
+}
+
+.back-button {
+  background-color: #b51616;
+  color: white;
+  border: none;
+  font-size: 40px;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-right: 10px; /* Adds spacing between the back button and the title */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Save button remains on the right */
+.save-button {
+  background-color: #b51616;
+  color: white;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+/* Form container should not exceed the width */
+.form-container {
+  width: 100%;
+  max-width: 600px; /* Restrict max width of form */
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #ffe6dc; /* Form background color */
+  margin-top: 20px;
+  box-sizing: border-box; /* Ensures padding doesn't affect the width */
+}
+
+.employee-form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+}
+
+input,
+select {
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  background-color: #ffe6dc; /* Black background for the inputs */
+  color: black; /* White text inside the inputs */
+  border: none; /* Remove borders */
+  border-radius: 4px;
+  box-sizing: border-box; /* Prevents overflow */
+  border-bottom: 2px solid black;
+}
+
+select {
+  cursor: pointer;
+}
+
+.pin input {
+  font-size: 20px;
+  letter-spacing: 20px;
+  text-align: center;
+  background-color: #ffe6dc; /* Black background for PIN input */
+  color: black; /* White text for PIN input */
+  border: none; /* Remove the border */
+}
+
+input:focus,
+select:focus {
+  outline: none;
+}
+
+input[type="text"]:read-only {
+  background-color: #ffe6dc; /* Ensure read-only input fields also have a black background */
+  color: grey; /* Ensure text is white */
+}
