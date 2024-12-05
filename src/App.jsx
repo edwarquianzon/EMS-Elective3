@@ -2,6 +2,8 @@ import React from "react"; // Adjust the path if needed
 import "./App.css";
 import ViewEmployee from "./employee/viewEmployee.jsx"; // Adjust the import path if needed
 import EditEmployee from "./employee/editEmployee.jsx"; // Make sure to import EditEmployee
+import CreateEmployee from "./employee/createEmployee.jsx";
+import EmployeeList from "./employee/employeeList.jsx";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
@@ -12,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/employee-list" element={<EmployeeList />} />
           <Route path="/create-employee" element={<CreateEmployee />} />
-          <Route path="/" element={<ViewEmployee />} />
+          <Route path="/view-employee" element={<ViewEmployee />} />
           <Route path="/edit-employee" element={<EditEmployee />} />
           <Route
             path="/"
