@@ -43,11 +43,20 @@ body {
 .details-container {
   padding: 20px;
   background-color: #ffe6dc;
-  margin: 20px auto; /* Center the container horizontally */
+  margin: 20px; /* Center the container horizontally */
   box-sizing: border-box; /* Ensures padding doesn't affect the width */
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* Align all items to the left */
+}
+
+.edit-button {
+  background-color: #b51616;
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 8px 16px;
+  cursor: pointer;
 }
 
 .detail-item {

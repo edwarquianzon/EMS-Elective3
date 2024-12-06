@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
+import { useNavigate } from "react-router-dom";
 import "./editEmployee.css";
 
 function EditEmployee() {
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: "john_doe",
     name: "John Doe",
@@ -13,7 +13,6 @@ function EditEmployee() {
     pin: "1234",
   });
 
-  // Handle form input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -22,17 +21,10 @@ function EditEmployee() {
     });
   };
 
-  // Handle form submit
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Log or save the updated employee data here
     console.log("Updated Employee Data:", formData);
-
-    // Optionally, you could send this data to a backend API here
-
-    // Navigate back to the view employee page after saving
-    navigate("/"); // Navigate to the home page (ViewEmployee)
+    navigate("/view-employee");
   };
 
   return (
@@ -46,11 +38,14 @@ function EditEmployee() {
           {"<"}
         </button>
         <span className="logo">Edit Employee</span>
+        <button className="save-button" onClick={handleSubmit}>
+          Save Changes
+        </button>
       </div>
 
       {/* Form Container */}
       <div className="form-container">
-        <form className="employee-form" onSubmit={handleSubmit}>
+        <form className="employee-form">
           <label>Username</label>
           <input
             type="text"
@@ -91,7 +86,6 @@ function EditEmployee() {
             value={formData.pin}
             onChange={handleChange}
           />
-          <button type="submit">Save Changes</button>
         </form>
       </div>
     </div>
