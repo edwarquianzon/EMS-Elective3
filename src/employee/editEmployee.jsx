@@ -39,7 +39,10 @@ function EditEmployee() {
     <div className="edit-employee-container">
       {/* Navbar Container */}
       <div className="navbar-container">
-        <button className="back-button" onClick={() => navigate("/")}>
+        <button
+          className="back-button"
+          onClick={() => navigate("/view-employee")}
+        >
           {"<"}
         </button>
         <span className="logo">Edit Employee</span>

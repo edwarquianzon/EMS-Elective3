@@ -16,7 +16,12 @@ function ViewEmployee() {
     <div className="view-employee-container">
       {/* Navbar Container */}
       <div className="navbar-container">
-        <button className="back-button">{"<"}</button>
+        <button
+          className="back-button"
+          onClick={() => navigate("/employee-list")}
+        >
+          {"<"}
+        </button>
         <span className="logo">View Employee</span>
         <Link to="/edit-employee">
           <button className="edit-button">Edit</button>

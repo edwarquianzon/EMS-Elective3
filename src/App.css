@@ -50,30 +50,17 @@ body {
 .sidebar {
   flex-grow: 1;
   background-color: #ffe6dc;
-  padding: 20px;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Aligns menu items at the top */
+  justify-content: flex-start;
 }
 
-.menu {
-  list-style-type: none;
-  padding: 0;
-}
-
-.menu-item {
+.save-button {
   padding: 10px 15px;
-  font-size: 18px;
+  font-size: 15px;
   cursor: pointer;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border-bottom: 2px solid black;
-  color: black;
-}
-
-.menu-item:hover {
-  background-color: #d08484;
-}
-
-.menu-item.active {
-  background-color: #d08484;
+  text-align: left;
 }
