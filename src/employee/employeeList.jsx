@@ -13,6 +13,10 @@ const EmployeeList = () => {
     navigate("/"); // Go back to the previous page in the history stack
   };
 
+  const handleRowClick = (username) => {
+    navigate(`/view-employee/`); // Navigate to EditEmployee page with username
+  };
+
   return (
     <div className="employee-list-container">
       <div className="header">
@@ -44,14 +48,14 @@ const EmployeeList = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr onClick={() => handleRowClick("jc1234")}>
             <td>jc1234</td>
             <td>Jeff Cruz</td>
             <td>Jeff Cruz@gmail.com</td>
             <td>09687345344</td>
             <td>Manager</td>
           </tr>
-          <tr>
+          <tr onClick={() => handleRowClick("ej189")}>
             <td>ej189</td>
             <td>Efren James</td>
             <td>Jfffe23@gmail.com</td>

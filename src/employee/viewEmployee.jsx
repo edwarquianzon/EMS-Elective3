@@ -1,8 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Import Link for navigation
+import { Link, useNavigate } from "react-router-dom"; // Import Link for navigation
 import "./viewEmployee.css";
-
+import "./employeeList";
 function ViewEmployee() {
+  const navigate = useNavigate();
   const formData = {
     username: "john_doe",
     name: "John Doe",

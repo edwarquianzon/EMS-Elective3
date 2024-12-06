@@ -52,7 +52,6 @@ function DefaultLayout() {
         <button className="save-button" onClick={goToEmployeeList}>
           Employee List
         </button>
-        <button className="save-button">Roles</button>
       </div>
     </>
   );
